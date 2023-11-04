@@ -1,32 +1,37 @@
 const mongoose = require('mongoose')
 
 
-const AuthSchema = new mongoose.Schema(
+const OrderSchema = new mongoose.Schema(
     {
-        Name: {
+        CustomerName: {
             type: String,
             required: true,
         },
-        Email: {
+        DateofOrder: {
             type: String,
             required: true,
             unique: true,
         },
-        UserName: {
+        PurchaesProduct: {
             type: String,
             required: true,
             unique: true,
         },
-        Password: {
+        TotalPrice: {
             type: String,
             required: true,
             unique: true,
+        },
+        Status:{
+            required:true,
+            default:'On Hold',
+            type:String,
         }
     }, { timestamps: true }
 )
 
-const AuthModel = mongoose.model('Auth', AuthSchema)
+const OrderModel = mongoose.model('OrderSchema', OrderSchema)
 module.exports = {
-    AuthModel
+    OrderModel
 }
 
