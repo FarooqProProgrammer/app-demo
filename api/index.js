@@ -52,6 +52,10 @@ app.use(session({
 app.use('/auth', require('./routes/AuthRoutes'))
 
 
+// Initiliaze Product Routes
+app.use('/product',require("./routes/ProductRoutes/OrderRoutes"))
+
+
 
 
 app.listen(process.env.PORT || 4040, () => {

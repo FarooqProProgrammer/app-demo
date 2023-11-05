@@ -7,12 +7,12 @@ const OrderSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        DateofOrder: {
+        DateOrder: {
             type: String,
             required: true,
             unique: true,
         },
-        PurchaesProduct: {
+        PurchaseProduct: {
             type: String,
             required: true,
             unique: true,
